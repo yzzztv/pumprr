@@ -75,32 +75,25 @@
       color: #cccccc;
     }
 
-    .carousel {
+
+    t.static-gallery {
       display: flex;
-      overflow: hidden;
-      white-space: nowrap;
-      animation: scroll 25s linear infinite;
+      justify-content: space-between;
+      flex-wrap: wrap;
       gap: 10px;
-      width: 100%;
-      -webkit-overflow-scrolling: touch;
+      margin-top: 10px;
     }
 
-    .carousel img {
-      height: 120px;
-      width: auto;
-      border-radius: 8px;
+    .static-gallery img {
+      width: 32%;
+      border-radius: 10px;
       cursor: pointer;
       transition: transform 0.3s ease;
-      flex-shrink: 0;
-    }
+   }
 
-    .carousel img:hover {
-      transform: scale(1.1);
-    }
-    @keyframes scroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-100%); }
-    }
+    .static-gallery img:hover {
+      transform: scale(1.05);
+  }
 
     .lightbox {
       position: fixed;
@@ -110,12 +103,14 @@
       justify-content: center;
       align-items: center;
       z-index: 10;
-    }
+  }
+
     .lightbox img {
       max-width: 90%;
       max-height: 90%;
       border-radius: 12px;
-    }
+ }
+
     .close-btn {
       position: absolute;
       top: 20px;
@@ -123,9 +118,9 @@
       font-size: 2em;
       color: #fff;
       cursor: pointer;
-    }
-
-    table {
+ }
+    
+     table {
       width: 100%;
       border-collapse: collapse;
       margin-top: 10px;
@@ -172,13 +167,15 @@
     </section>
 
     <section>
-      <div class="carousel" id="carousel">
-        <!-- Gambar akan diganti user dengan 1.jpg sampai 10.jpg -->
+      <div class="lightbox" id="lightbox">
+      <span class="close-btn" onclick="document.getElementById('lightbox').style.display='none'">&times;</span>
+      <img id="lightbox-img" src="" alt="Preview">
+      </div>
+      <h2>Gallery</h2>
+      <div class="static-gallery">
         <img src="1.jpg" alt="1">
         <img src="2.jpg" alt="2">
         <img src="3.jpg" alt="3">
-        <img src="4.jpg" alt="4">
-        <img src="5.jpg" alt="5">
       </div>
     </section>
     
@@ -226,16 +223,17 @@
   </div>
 
   <script>
-    const carouselImages = document.querySelectorAll('.carousel img');
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
+      const galleryImages = document.querySelectorAll('.static-gallery img');
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
 
-    carouselImages.forEach(img => {
-      img.addEventListener('click', () => {
-        lightbox.style.display = 'flex';
-        lightboxImg.src = img.src;
-      });
+      galleryImages.forEach(img => {
+       img.addEventListener('click', () => {
+          lightbox.style.display = 'flex';
+          lightboxImg.src = img.src;
     });
-  </script>
+  });
+</script>
+
 </body>
 </html>
