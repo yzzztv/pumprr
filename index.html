@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- Basic Meta Tags -->
+  <meta name="title" content="PUMPRR - Fastrr than fun ⚡">
+  <meta name="description" content="Fastest on chain aggregator on Solana. Launch across pump.fun, bonk.fun, and more directly from Telegram. Creators earn 1% of all fees.">
+  <meta name="keywords" content="PUMPRR, Solana, aggregator, crypto, pump.fun, bonk.fun, degen, token launch">
+  <meta name="author" content="Pumprrbot">
+
+  <!-- Open Graph / Facebook / Telegram -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourwebsite.com/">
+  <meta property="og:title" content="PUMPRR - Fastrr than fun ⚡">
+  <meta property="og:description" content="Fastest on chain aggregator on Solana. Launch tokens instantly from Telegram.">
+  <meta property="og:image" content="https://yourwebsite.com/preview.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://x.com/Pumprrbot">
+  <meta name="twitter:title" content="PUMPRR - Fastrr than fun ⚡">
+  <meta name="twitter:description" content="Fastest on chain aggregator on Solana. Launch across pump.fun, bonk.fun, and more directly from Telegram.">
+  <meta name="twitter:image" content="https://yourwebsite.com/preview.jpg">
+  <title>PUMPRR - Fastrr than fun ⚡</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: url('bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #ffffff;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+    section {
+      background-color: rgba(0, 0, 0, 0.75);
+      padding: 20px;
+      border-radius: 16px;
+      margin-bottom: 30px;
+      box-shadow: 0 0 20px rgba(0,255,170,0.2);
+    }
+    header {
+      text-align: center;
+    }
+    header h1 {
+      font-size: 3em;
+      background: linear-gradient(to right, #7f00ff, #00ffcc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    header p {
+      font-size: 1.2em;
+      color: #cccccc;
+    }
+
+    .carousel {
+      display: flex;
+      overflow: hidden;
+      white-space: nowrap;
+      animation: scroll 25s linear infinite;
+      gap: 10px;
+    }
+    .carousel img {
+      height: 120px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .carousel img:hover {
+      transform: scale(1.1);
+    }
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    .lightbox {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0,0,0,0.9);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 12px;
+    }
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 2em;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      padding: 10px;
+      border-bottom: 1px solid #444;
+    }
+    th {
+      text-align: left;
+      color: #00ffcc;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #aaa;
+    }
+    a {
+      color: #00ffcc;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>PUMPRR - Fastrr than fun ⚡</h1>
+      <p>The fastest on-chain aggregator on Solana</p>
+    </header>
+
+    <section>
+      <h2>Welcome to $PUMPRR</h2>
+      <p>
+        Launch tokens across pump.fun, bonk.fun, believe and more instantly — directly from Telegram.<br/>
+        Creators retain 1% of all fees generated.
+      </p>
+      <p>
+        Built for the speed demons of crypto. If you missed the last moonshot, don't miss this one.<br/>
+        $PUMPRR is the ultimate power-up for meme lords, degen kings, and launch maniacs.<br/>
+        This isn't just fast. It's PUMPRR fast.
+      </p>
+    </section>
+
+    <section>
+      <div class="carousel" id="carousel">
+        <!-- Gambar akan diganti user dengan 1.jpg sampai 10.jpg -->
+        <img src="1.jpg" alt="1">
+        <img src="2.jpg" alt="2">
+        <img src="3.jpg" alt="3">
+        <img src="4.jpg" alt="4">
+        <img src="5.jpg" alt="5">
+        <img src="6.jpg" alt="6">
+        <img src="7.jpg" alt="7">
+        <img src="8.jpg" alt="8">
+        <img src="9.jpg" alt="9">
+        <img src="10.jpg" alt="10">
+      </div>
+    </section>
+
+    <div class="lightbox" id="lightbox">
+      <span class="close-btn" onclick="document.getElementById('lightbox').style.display='none'">&times;</span>
+      <img id="lightbox-img" src="" alt="Preview">
+    </div>
+
+    <section>
+      <h2>Tokenomics</h2>
+      <table>
+        <tr><th>Name</th><td>Pumprr Bot</td></tr>
+        <tr><th>Ticker</th><td>$PUMPRR</td></tr>
+        <tr><th>Total Supply</th><td>-</td></tr>
+        <tr><th>Liquidity</th><td>-</td></tr>
+        <tr><th>Tax</th><td>-</td></tr>
+        <tr><th>Contract</th><td>-</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>Roadmap</h2>
+      <ul>
+        <li>Phase 1: Launch aggregator bot + website</li>
+        <li>Phase 2: Collaborate with meme creators & degen groups</li>
+        <li>Phase 3: DEX integrations & automated LP management</li>
+        <li>Phase 4: NFT integration + loyalty points</li>
+        <li>Phase 5: DAO governance for fee control</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Links</h2>
+      <p>
+        <strong>Twitter:</strong> <a href="https://x.com/Pumprrbot" target="_blank">https://x.com/Pumprrbot</a><br/>
+        <strong>Telegram:</strong> <a href="https://t.me" target="_blank">https://t.me</a><br/>
+        <strong>Dexscreener:</strong> <a href="https://dexscreener.com" target="_blank">https://dexscreener.com</a>
+      </p>
+    </section>
+
+    <section>
+      <h2>Final Words</h2>
+      <p>
+        $PUMPRR isn’t a project, it’s a movement.<br/>
+        Be part of the fastest and most fun revolution in Solana’s memecoin scene.<br/>
+        Go fast. Go fun. Go $PUMPRR.
+      </p>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Pumprrbot</p>
+    </footer>
+  </div>
+
+  <script>
+    const carouselImages = document.querySelectorAll('.carousel img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    carouselImages.forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+      });
+    });
+  </script>
+</body>
+</html>
