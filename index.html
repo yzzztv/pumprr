@@ -55,8 +55,13 @@
       background: linear-gradient(to right, #7f00ff, #00ffcc);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
-    }
+      text-shadow:
+        -2px -2px 0 #000,
+         2px -2px 0 #000,
+        -2px  2px 0 #000,
+         2px  2px 0 #000;
+     }
+
 
     header p {
       font-size: 1.2em;
