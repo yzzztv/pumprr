@@ -81,13 +81,19 @@
       white-space: nowrap;
       animation: scroll 25s linear infinite;
       gap: 10px;
+      width: 100%;
+      -webkit-overflow-scrolling: touch;
     }
+
     .carousel img {
       height: 120px;
+      width: auto;
       border-radius: 8px;
       cursor: pointer;
-      transition: transform 0.5s ease;
+      transition: transform 0.3s ease;
+      flex-shrink: 0;
     }
+
     .carousel img:hover {
       transform: scale(1.1);
     }
