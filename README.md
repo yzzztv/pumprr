@@ -1,2 +1,0 @@
-# pumprr
-pumprrbot website
