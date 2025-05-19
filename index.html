@@ -152,6 +152,39 @@
       border-radius: 16px;
       box-shadow: 0 0 15px rgba(0,255,170,0.2);
    }
+
+    .social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.social-buttons a {
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0,255,170,0.2);
+}
+
+.btn-x {
+  background: linear-gradient(135deg, #1da1f2, #0f88cc);
+}
+
+.btn-tg {
+  background: linear-gradient(135deg, #0088cc, #00cfff);
+}
+
+.social-buttons a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0,255,255,0.4);
+}
+    
     
   </style>
 </head>
@@ -162,6 +195,11 @@
       <p>The fastest on-chain aggregator on Solana</p>
 
   <!-- CoinGecko Widget -->
+      <div class="social-buttons">
+      <a href="https://x.com/pumprrbot" target="_blank" class="btn-x">Follow on X</a>
+      <a href="https://t.me/" target="_blank" class="btn-tg">Join Telegram</a>
+      </div>
+      
       <div class="widget-box">
       <script src="https://widgets.coingecko.com/gecko-coin-price-marquee-widget.js"></script>
       <gecko-coin-price-marquee-widget 
