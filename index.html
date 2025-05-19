@@ -33,8 +33,11 @@
       font-family: 'Orbitron', sans-serif;
       background: url('bg.jpg') no-repeat center center fixed;
       background-size: cover;
+      background-attachment: fixed;
+      background-position: center top;
       color: #ffffff;
-    }
+     }
+
     .container {
       max-width: 1000px;
       margin: auto;
@@ -197,6 +200,17 @@
   transform: scale(1.05);
   box-shadow: 0 0 15px rgba(0,255,255,0.4);
 }
+    .fade-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+    
 
     
   </style>
@@ -308,6 +322,32 @@
     });
   });
 </script>
+  <script>
+  function handleScrollFade() {
+    const sections = document.querySelectorAll('.fade-section');
+    const triggerBottom = window.innerHeight * 0.85;
 
+    sections.forEach(section => {
+      const boxTop = section.getBoundingClientRect().top;
+
+      if (boxTop < triggerBottom) {
+        section.classList.add('visible');
+      } else {
+        section.classList.remove('visible');
+      }
+    });
+  }
+
+  // Fade in saat load pertama kali
+  window.addEventListener('DOMContentLoaded', () => {
+    handleScrollFade();
+  });
+
+  window.addEventListener('scroll', handleScrollFade);
+  </script>
+  
+
+
+  
 </body>
 </html>
