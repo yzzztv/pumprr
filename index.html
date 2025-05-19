@@ -144,6 +144,15 @@
       color: #00ffcc;
       text-decoration: none;
     }
+
+    .widget-box {
+      background-color: rgba(0, 0, 0, 0.75);
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 16px;
+      box-shadow: 0 0 15px rgba(0,255,170,0.2);
+   }
+    
   </style>
 </head>
 <body>
@@ -153,6 +162,7 @@
       <p>The fastest on-chain aggregator on Solana</p>
 
   <!-- CoinGecko Widget -->
+      <div class="widget-box">
       <script src="https://widgets.coingecko.com/gecko-coin-price-marquee-widget.js"></script>
       <gecko-coin-price-marquee-widget 
         locale="en" 
@@ -161,6 +171,8 @@
         coin-ids="solana,ethereum,bitcoin" 
         initial-currency="usd">
       </gecko-coin-price-marquee-widget>
+    </div>
+
     </header>
 
     <section>
